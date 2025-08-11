@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://camqbttjr6ajh"]
+
+[ext_resource type="Script" uid="uid://tfenv4cac5kb" path="res://Scripts/player_body.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dxa0ugoxlp2yx" path="res://Sprites/Sprite-0002.svg" id="1_v0iea"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cvnsp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v0iea")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="playerBody" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="playerBody"]
+position = Vector2(-9.53674e-07, -4)
+scale = Vector2(0.480469, 0.53125)
+sprite_frames = SubResource("SpriteFrames_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="playerBody"]
+zoom = Vector2(2, 2)

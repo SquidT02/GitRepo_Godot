@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://chtfm7sxltsvo"]
+[gd_scene load_steps=8 format=4 uid="uid://chtfm7sxltsvo"]
 
 [ext_resource type="Texture2D" uid="uid://s0bk3ugks1oi" path="res://Sprites/Tile_set.svg" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://camqbttjr6ajh" path="res://Scenes/player.tscn" id="2_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://vatn7lfqw2ml" path="res://Sprites/tree-1.png.png" id="3_8gbba"]
-[ext_resource type="Script" uid="uid://lnxtvnh8jvme" path="res://Scripts/tree.gd" id="3_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://b660x216acckp" path="res://Scenes/tree.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://boxx5yw7a78wc" path="res://Scenes/rock_small.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://y34ig4er65g0" path="res://Scenes/rock_normal.tscn" id="5_kry3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_jjgbg")
@@ -25,13 +26,13 @@ tile_map_data = PackedByteArray("AAD8//z/AAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAA
 tile_set = SubResource("TileSet_y32ns")
 
 [node name="Player" parent="ground" instance=ExtResource("2_bo1nx")]
+position = Vector2(16, -26)
 
-[node name="tree" type="Node2D" parent="."]
-script = ExtResource("3_jjvhh")
+[node name="tree" parent="ground" instance=ExtResource("3_8gbba")]
+position = Vector2(63, -14)
 
-[node name="Health" type="Label" parent="tree"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="rock_small" parent="ground" instance=ExtResource("4_jjvhh")]
+position = Vector2(-17, -1)
 
-[node name="Sprite2D" type="Sprite2D" parent="tree"]
-texture = ExtResource("3_8gbba")
+[node name="rock_normal" parent="ground" instance=ExtResource("5_kry3j")]
+position = Vector2(48, 18)

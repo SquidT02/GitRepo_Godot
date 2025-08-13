@@ -25,4 +25,4 @@ scale = Vector2(0.480469, 0.53125)
 sprite_frames = SubResource("SpriteFrames_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="playerBody"]
-zoom = Vector2(2, 2)
+zoom = Vector2(2.5, 2.5)

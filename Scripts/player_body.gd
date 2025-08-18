@@ -2,14 +2,13 @@ extends Node2D
 @export var moveSpeed := 1
 @onready var ground: TileMapLayer = $".."
 var astar = AStarGrid2D.new()
-
 var idPath := []
 var used_idPath := []
 
 ### _Functions #################################################################
 func _ready() -> void:
 	setUpAstarGrid()
-
+	
 func _input(event: InputEvent) -> void:
 	### if the player hasn't clicked, an input isnt ran to save processing power
 	if event.is_action_pressed("Mouse Left") == false:

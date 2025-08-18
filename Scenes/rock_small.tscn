@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://boxx5yw7a78wc"]
+[gd_scene load_steps=3 format=3 uid="uid://boxx5yw7a78wc"]
 
 [ext_resource type="Script" uid="uid://bidrdaolotttb" path="res://Scripts/rock_small.gd" id="1_hdftd"]
 [ext_resource type="Texture2D" uid="uid://dugbkita64kth" path="res://Sprites/Rock_small-1.png.png" id="2_sh3f8"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh3f8"]
-size = Vector2(26, 11)
 
 [node name="rock_small" type="Node2D"]
 position = Vector2(-1, -10)
@@ -18,9 +15,3 @@ offset_bottom = 23.0
 position = Vector2(0, 1)
 scale = Vector2(1, 0.9375)
 texture = ExtResource("2_sh3f8")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, 5.5)
-shape = SubResource("RectangleShape2D_sh3f8")

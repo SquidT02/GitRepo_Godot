@@ -6,12 +6,12 @@ var health = 55
 
 func _ready():
 	set_process_input(true)
-	$Health_rock_normal.position = Vector2(-10 , -30)
-	$Health_rock_normal.modulate = Color.RED
+	health_label.position = Vector2(-10 , -30)
+	health_label.modulate = Color.RED
 
 func _input(event):
 	if event.is_action_pressed("break"):
 		health -= 5
-		$Health_rock_normal.text = str(health)
+		health_label.text = str(health)
 		if health <= 0:
 			queue_free()
